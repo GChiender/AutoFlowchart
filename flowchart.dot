@@ -1,0 +1,28 @@
+digraph G {
+    node [shape=box, style=filled, color=lightblue];
+    op2->operation: from pyflowchart import Flowchart
+op4->operation: import pygraphviz as pgv
+op6->operation: import graphviz2drawio
+op8->operation: import drawpyo
+st11->start: start calculate
+io13->inputoutput: input: a, b
+cond17->condition: if (a > b)
+io24->inputoutput: output:  (a - b)
+e22->end: end function return
+cond30->operation: print(f'循环{i}') while  i in range(3)
+io45->inputoutput: output:  (a + b)
+e43->end: end function return
+
+op2->op4
+op4->op6
+op6->op8
+op8->st11
+st11->io13
+io13->cond17
+cond17(yes)->io24
+io24->e22
+cond17(no)->cond30
+cond30->io45
+io45->e43
+
+}
